@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="site-title" onclick="goHome()">Tian Xia</h1>
+        <button id="menu-toggle">></button>
+    </header>
+
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script>
+        function goHome() {
+            window.location.href = "home.html";
+        }
+
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("sidebar").classList.toggle("open");
+        });
+    </script>
+</body>
+</html>
