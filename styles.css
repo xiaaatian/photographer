@@ -1,0 +1,88 @@
+/* 全局设置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Courier New", monospace;
+    font-weight: normal;
+}
+
+body {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+/* Welcome 页面 */
+.welcome-page {
+    background: url('images/welcome-photo.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-container h1 {
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+    transition: transform 1s ease-in-out;
+}
+
+.welcome-container h1:hover {
+    transform: scale(1.05);
+}
+
+/* Home 页面 */
+header {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* 侧边栏菜单 */
+#menu-toggle {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    transition: left 0.3s ease-in-out;
+}
+
+#sidebar.open {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 50px;
+}
+
+#sidebar ul li {
+    margin: 20px 0;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
